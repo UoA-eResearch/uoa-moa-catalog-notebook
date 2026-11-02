@@ -1,0 +1,7 @@
+# Dependencies, pinned to the versions this repo is tested against (Python 3.13)
+astropy==8.0.1
+numpy==2.5.2
+matplotlib==3.11.1
+ipywidgets==8.1.9
+requests==2.34.2
+ipykernel==7.3.0

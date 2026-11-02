@@ -1,0 +1,16 @@
+# Tool configuration only - this repo isn't an installable package.
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+# lib/ is on sys.path at runtime (see the notebook's bootstrap cell), so treat
+# its modules as first-party for import sorting.
+src = ["lib"]
+extend-include = ["*.ipynb"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["lib"]
+testpaths = ["tests"]

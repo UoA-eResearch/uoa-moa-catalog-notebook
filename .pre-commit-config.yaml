@@ -1,0 +1,15 @@
+# Install once per clone: pre-commit install
+# Run by hand:            pre-commit run --all-files
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      # Commit notebooks without outputs or execution counts.
+      - id: nbstripout
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.1
+    hooks:
+      # Lints lib/, tests/ and the notebook (config in pyproject.toml).
+      - id: ruff-check
+        types_or: [python, jupyter]
